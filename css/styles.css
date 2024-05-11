@@ -42,6 +42,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
+  --bg-sm: #04686F;
   --bs-primary-rgb: 26, 188, 156;
   --bs-secondary-rgb: 44, 62, 80;
   --bs-success-rgb: 25, 135, 84;
@@ -601,6 +602,9 @@ progress {
 .img-fluid {
   max-width: 100%;
   height: auto;
+  object-fit: cover;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .img-thumbnail {
@@ -8130,6 +8134,11 @@ textarea.form-control-lg {
   background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
 }
 
+.bg-sm {
+  --bs-bg-opacity: 1;
+  background-color: var(--bg-sm) !important;
+}
+
 .bg-secondary {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
@@ -10970,6 +10979,7 @@ html {
 .masthead {
   padding-top: calc(6rem + 74px);
   padding-bottom: 6rem;
+  height: 100vh;
 }
 .masthead .masthead-heading {
   font-size: 2.75rem;
@@ -11009,7 +11019,7 @@ html {
   left: 0;
   transition: all 0.2s ease-in-out;
   opacity: 0;
-  background-color: rgba(26, 188, 156, 0.9);
+  background-color: rgba(4, 104, 111, 0.5);
 }
 .portfolio .portfolio-item .portfolio-item-caption:hover {
   opacity: 1;
