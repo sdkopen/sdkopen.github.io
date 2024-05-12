@@ -11017,9 +11017,10 @@ html {
   position: absolute;
   top: 0;
   left: 0;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
   opacity: 0;
   background-color: rgba(4, 104, 111, 0.5);
+  border-radius: 50%;
 }
 .portfolio .portfolio-item .portfolio-item-caption:hover {
   opacity: 1;
@@ -11053,4 +11054,8 @@ html {
 
 .copyright {
   background-color: #1a252f;
+}
+
+.feature-link {
+  border-radius: 50px;
 }
