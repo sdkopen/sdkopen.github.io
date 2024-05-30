@@ -26,6 +26,13 @@ const features = [
     description: 'This is a simple documentation SDK for Spring Boot applications. It provides a simple configuration of provides documentation for your applications.',
     github: 'https://github.com/SeniorityMeter/sm-spring-documentation',
     sonatype: 'https://central.sonatype.com/artifact/br.com.senioritymeter/documentation',
+  },
+  {
+    id: 5,
+    icon: 'assets/img/features/sm-spring-monitoring.svg',
+    description: 'This is a simple monitoring SDK for Spring Boot applications. It provides a simple configuration of provides monitoring for your applications.',
+    github: 'https://github.com/SeniorityMeter/sm-spring-monitoring',
+    sonatype: 'https://central.sonatype.com/artifact/br.com.senioritymeter/monitoring',
   }
 ];
 
