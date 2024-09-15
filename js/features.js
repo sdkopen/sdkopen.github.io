@@ -17,8 +17,15 @@ const features = [
     id: 2,
     icon: 'assets/img/features/sdkopen-spring-notification.svg',
     description: 'This is a simple notification SDK for Spring Boot applications.',
-    github: 'https://github.com/sdkopen/sdkopen-spring-notification',
-    sonatype: 'https://central.sonatype.com/artifact/br.com.sdkopen/notification',
+    components: [
+      {
+        name: 'sdkopen-spring-notification-email',
+        icon: 'assets/img/features/notification/email.svg',
+        description: 'This is a simple notification email SDK for Spring Boot applications.',
+        github: 'https://github.com/sdkopen/sdkopen-spring-notification-email',
+        sonatype: 'https://central.sonatype.com/artifact/br.com.sdkopen/notification-email',
+      }
+    ]
   },
   {
     id: 3,
