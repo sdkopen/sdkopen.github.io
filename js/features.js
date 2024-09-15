@@ -1,42 +1,86 @@
 const features = [
   {
     id: 1,
-    icon: 'assets/img/features/sm-spring-storage.svg',
-    description: 'This is a simple storage SDK for Spring Boot applications. It provides a simple way to store and retrieve files from the file system.',
-    github: 'https://github.com/SeniorityMeter/sm-spring-storage',
-    sonatype: 'https://central.sonatype.com/artifact/br.com.senioritymeter/storage',
+    icon: 'assets/img/features/sdkopen-spring-storage.svg',
+    description: 'This is a simple Storage SDK for Spring Boot applications.',
+    components: [
+      {
+        name: 'sdkopen-spring-aws-s3',
+        icon: 'assets/img/features/storage/aws-s3.svg',
+        description: 'This is a simple AWS S3 SDK for Spring Boot applications.',
+        github: 'https://github.com/sdkopen/sdkopen-spring-aws-s3',
+        sonatype: 'https://central.sonatype.com/artifact/br.com.sdkopen/aws-s3',
+      }
+    ]
   },
   {
     id: 2,
-    icon: 'assets/img/features/sm-spring-notification.svg',
-    description: 'This is a simple notification SDK for Spring Boot applications. It provides a simple way to send notifications to users.',
-    github: 'https://github.com/SeniorityMeter/sm-spring-notification',
-    sonatype: 'https://central.sonatype.com/artifact/br.com.senioritymeter/notification',
+    icon: 'assets/img/features/sdkopen-spring-notification.svg',
+    description: 'This is a simple notification SDK for Spring Boot applications.',
+    github: 'https://github.com/sdkopen/sdkopen-spring-notification',
+    sonatype: 'https://central.sonatype.com/artifact/br.com.sdkopen/notification',
   },
   {
     id: 3,
-    icon: 'assets/img/features/sm-spring-security.svg',
-    description: 'This is a simple security SDK for Spring Boot applications. It provides a simple configuration of provides authentication for your applications.',
-    github: 'https://github.com/SeniorityMeter/sm-spring-security',
-    sonatype: 'https://central.sonatype.com/artifact/br.com.senioritymeter/security',
+    icon: 'assets/img/features/sdkopen-spring-security.svg',
+    description: 'This is a simple security SDK for Spring Boot applications.',
+    github: 'https://github.com/sdkopen/sdkopen-spring-security',
+    sonatype: 'https://central.sonatype.com/artifact/br.com.sdkopen/security',
   },
   {
     id: 4,
-    icon: 'assets/img/features/sm-spring-documentation.svg',
-    description: 'This is a simple documentation SDK for Spring Boot applications. It provides a simple configuration of provides documentation for your applications.',
-    github: 'https://github.com/SeniorityMeter/sm-spring-documentation',
-    sonatype: 'https://central.sonatype.com/artifact/br.com.senioritymeter/documentation',
+    icon: 'assets/img/features/sdkopen-spring-documentation.svg',
+    description: 'This is a simple documentation SDK for Spring Boot applications.',
+    github: 'https://github.com/SeniorityMeter/sdkopen-spring-documentation',
+    sonatype: 'https://central.sonatype.com/artifact/br.com.sdkopen/documentation',
   },
   {
     id: 5,
-    icon: 'assets/img/features/sm-spring-monitoring.svg',
-    description: 'This is a simple monitoring SDK for Spring Boot applications. It provides a simple configuration of provides monitoring for your applications.',
-    github: 'https://github.com/SeniorityMeter/sm-spring-monitoring',
-    sonatype: 'https://central.sonatype.com/artifact/br.com.senioritymeter/monitoring',
+    icon: 'assets/img/features/sdkopen-spring-monitoring.svg',
+    description: 'This is a simple monitoring SDK for Spring Boot applications.',
+    github: 'https://github.com/sdkopen/sdkopen-spring-monitoring',
+    sonatype: 'https://central.sonatype.com/artifact/br.com.sdkopen/monitoring',
   }
 ];
 
+function createFeatureDetailsElement(feature) {
+  const details = createDetailsElement(feature);
+  return `
+    <div class="col-md-6 col-lg-3 mb-5">
+      <div class="mx-auto">
+        <img class="img-fluid" src="${feature.icon}" alt="..."/>
+      </div>
+      ${details}
+    </div> 
+  `;
+}
+
+function createDetailsElement(feature) {
+  return `
+    <div>
+      <a href="${feature.github}" target="_blank">
+        <img src="assets/img/link/github.png" alt="github link" width="100px" class="feature-link" />
+      </a>
+      <a href="${feature.sonatype}" target="_blank">
+        <img src="assets/img/link/sonatype.jpeg" alt="github link" width="100px" class="feature-link" />
+      </a>
+    </div>
+  `;
+}
+
+function createGroupFeature(components) {
+  return `
+    <div class="row">
+     ${components.map(component => createFeatureDetailsElement(component)).join('')}
+    </div>
+  `;
+}
+
 function createFeatureModalElement(feature) {
+  const details = feature.components
+    ? createGroupFeature(feature.components)
+    : createDetailsElement(feature);
+
   return `
     <div 
       class="portfolio-modal modal fade"
@@ -62,14 +106,7 @@ function createFeatureModalElement(feature) {
                   <!-- Portfolio Modal - Text-->
                   <p class="mb-4 h3">${feature.description}</p>
                 </div>
-                <div>
-                  <a href="${feature.github}" target="_blank">
-                    <img src="assets/img/link/github.png" alt="github link" width="100px" class="feature-link" />
-                  </a>
-                  <a href="${feature.sonatype}" target="_blank">
-                    <img src="assets/img/link/sonatype.jpeg" alt="github link" width="100px" class="feature-link" />
-                  </a>
-                </div>
+                ${details}
               </div>
             </div>
           </div>
