@@ -5,11 +5,11 @@ const features = [
     description: 'This is a simple Storage SDK for Spring Boot applications.',
     components: [
       {
-        name: 'sdkopen-spring-aws-s3',
+        name: 'sdkopen-spring-storage-aws-s3',
         icon: 'assets/img/features/storage/aws-s3.svg',
-        description: 'This is a simple AWS S3 SDK for Spring Boot applications.',
-        github: 'https://github.com/sdkopen/sdkopen-spring-aws-s3',
-        sonatype: 'https://central.sonatype.com/artifact/br.com.sdkopen/aws-s3',
+        description: 'This is a simple storage AWS S3 SDK for Spring Boot applications.',
+        github: 'https://github.com/sdkopen/sdkopen-spring-storage-aws-s3',
+        sonatype: 'https://central.sonatype.com/artifact/br.com.sdkopen/storage-aws-s3',
       }
     ]
   },
