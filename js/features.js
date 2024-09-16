@@ -38,7 +38,7 @@ const features = [
     id: 4,
     icon: 'assets/img/features/sdkopen-spring-documentation.svg',
     description: 'This is a simple documentation SDK for Spring Boot applications.',
-    github: 'https://github.com/SeniorityMeter/sdkopen-spring-documentation',
+    github: 'https://github.com/sdkopen/sdkopen-spring-documentation',
     sonatype: 'https://central.sonatype.com/artifact/br.com.sdkopen/documentation',
   },
   {
